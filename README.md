@@ -66,6 +66,7 @@ Versões necessárias para executar o projeto:
     }
     ...
   ```
+  - Mais informações sobre esse erro: [StackOverflow](https://stackoverflow.com/questions/51731129/could-not-resolve-all-files-for-configuration-appdebugcompileclasspath)
 
 License
 ----
