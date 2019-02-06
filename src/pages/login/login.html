@@ -1,0 +1,57 @@
+<ion-content padding>
+  <ion-fab top right>
+    <button ion-fab mini (click)="close()"><ion-icon name="close"></ion-icon></button>
+  </ion-fab>
+  <ion-grid>
+    <ion-row>
+      <ion-col text-center>
+        <img src="assets/imgs/logo.png" width="50%">
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <form #loginForm="ngForm" (ngSubmit)="login()">
+          <ion-list no-lines no-margin class="custom-list">
+            <ion-item>
+              <ion-label floating>Email</ion-label>
+              <ion-input type="email" name="email" [(ngModel)]="user.email" required></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-label floating>Password</ion-label>
+              <ion-input type="password" name="password" [(ngModel)]="user.password" required></ion-input>
+            </ion-item>
+            <ion-item>
+              <button ion-button round block large [disabled]="!loginForm.form.valid">Login</button>
+            </ion-item>
+          </ion-list>
+        </form>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <div class="strike">
+          <span>ou cadastre-se</span>
+        </div>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col col-6>
+        <button ion-button icon-left round block color="facebook" (click)="loginFacebook()">
+          <ion-icon name="logo-facebook"></ion-icon> Facebook
+        </button>
+      </ion-col>
+      <ion-col col-6>
+        <button ion-button icon-left round block color="google" (click)="loginGoogle()">
+          <ion-icon name="logo-google"></ion-icon> Google
+        </button>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col col-6 offset-3>
+        <button ion-button icon-left round block color="email" (click)="toRegister()">
+          <ion-icon name="mail"></ion-icon> Email
+        </button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

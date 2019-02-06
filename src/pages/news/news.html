@@ -1,0 +1,17 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>Notícias</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-card class="custom-card" *ngFor="let new of news" (click)="toNewsDetails(new)">
+    <img [src]="new?.img"/>
+    <ion-card-content>
+      <ion-card-title>
+        {{new?.title}}
+      </ion-card-title>
+      <p>{{new?.description}}</p>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

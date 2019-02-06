@@ -1,0 +1,7 @@
+{
+  "name": "news-challenge",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}

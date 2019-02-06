@@ -1,0 +1,45 @@
+page-login {
+    .scroll-content {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-image: url("../assets/imgs/background.png");
+        background-size: cover;
+        background-position: center;
+    }
+
+    .strike {
+        display: block;
+        text-align: center;
+        overflow: hidden;
+        white-space: nowrap; 
+    }
+    
+    .strike > span {
+        color: color($colors, primary);
+        font-size: 15px;
+        text-transform: uppercase;
+        position: relative;
+        display: inline-block;
+    }
+    
+    .strike > span:before,
+    .strike > span:after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        width: 100%;
+        height: 1px;
+        background: color($colors, primary);
+    }
+    
+    .strike > span:before {
+        right: 100%;
+        margin-right: 15px;
+    }
+    
+    .strike > span:after {
+        left: 100%;
+        margin-left: 15px;
+    }
+}

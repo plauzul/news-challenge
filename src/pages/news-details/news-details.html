@@ -1,0 +1,12 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>{{news?.title}}</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-card class="custom-card">
+    <img [src]="news?.img"/>
+  </ion-card>
+  <p text-justify class="post">{{news?.text}}</p>
+</ion-content>

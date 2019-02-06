@@ -1,0 +1,28 @@
+<ion-content>
+  <ion-grid>
+    <ion-row>
+      <ion-col text-center>
+        <img src="assets/imgs/logo.png" width="50%">
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <form #loginForm="ngForm" (ngSubmit)="register()">
+          <ion-list no-lines no-margin class="custom-list">
+            <ion-item>
+              <ion-label floating>Email</ion-label>
+              <ion-input type="email" name="email" [(ngModel)]="user.email" required></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-label floating>Password</ion-label>
+              <ion-input type="password" name="password" [(ngModel)]="user.password" required></ion-input>
+            </ion-item>
+            <ion-item>
+              <button ion-button round block large [disabled]="!loginForm.form.valid">Cadastrar</button>
+            </ion-item>
+          </ion-list>
+        </form>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

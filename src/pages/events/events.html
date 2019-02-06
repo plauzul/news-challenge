@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>Eventos</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-card class="custom-card" *ngFor="let event of events">
+    <img [src]="event?.img">
+    <ion-item>
+      <ion-icon name="pin" item-start large></ion-icon>
+      <h2>{{event?.title}}</h2>
+      <p>{{event?.address}}</p>
+    </ion-item>
+    <ion-item>
+      <button ion-button clear item-end>
+        Participar
+      </button>
+    </ion-item>
+  </ion-card>
+</ion-content>
